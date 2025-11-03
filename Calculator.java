@@ -91,15 +91,19 @@ public class Calculator{
                                 Double num2 = Double.parseDouble(B);
                                 if (operator == "+"){
                                     displaylabel.setText(removedeci(num1+num2));
+                                         continueAll();
                                 }
                                 else if (operator == "-"){
                                     displaylabel.setText(removedeci(num1-num2));
+                                         continueAll();
                                 }
                                 else if (operator=="×"){
                                     displaylabel.setText(removedeci(num1*num2));
+                                         continueAll();
                                 }
                                 else if (operator=="÷"){
                                     displaylabel.setText(removedeci(num1/num2));
+                                         continueAll();
                                 }
                             }
 
@@ -166,6 +170,12 @@ public class Calculator{
             operator=null;
             B=null;;
      }
+      void continueAll(){
+            A= displaylabel.getText();
+            operator=null;
+            B=null;
+
+     }
     String removedeci(double numd){
             if (numd%1 == 0){
                 return Integer.toString((int) numd);
@@ -177,6 +187,7 @@ public class Calculator{
 
 
             }
+
 
 
 
